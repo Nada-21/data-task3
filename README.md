@@ -47,7 +47,7 @@ return loan_value * interest_rate;
 \\So just because it is const doesn't mean that non-const objects can't use it.
 
 
-        4- Const Overloading:
+         4- Const Overloading:
 
 int& myClass::getData()
 {
@@ -99,8 +99,8 @@ bad_strlen( const_cast<char *>(x) );
 
    ->> &-usage:
 
-
-   1- Bitwise AND:
+ 
+         1- Bitwise AND:
 
 #include <iostream>  
 using namespace std;
@@ -112,7 +112,7 @@ unsigned short b = 0xAAAA;      // pattern 1010 ...
 cout << hex << ( a & b ) << endl;
 }
 
-   2- Address Of operator:
+        2- Address Of operator:
 
 #include <iostream>  
 using namespace std;
@@ -136,7 +136,7 @@ cout << "Value of val :" << val << endl;
 return 0;
 }
 
-   3- Bitwise-and-assign:
+        3- Bitwise-and-assign:
 
    x &= y; 
 Means the same as: 
