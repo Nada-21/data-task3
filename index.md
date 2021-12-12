@@ -19,3 +19,18 @@ std::vector vec; vec.push_back( 3 ); vec.push_back( 4 ); vec.push_back( 8 ); for
 
  6- Const cast:
 \Const casts look like regular typecasts in C++, \except that they can only be used for casting away constness (or volatile-ness) \but not converting between types or casting down a class hierarchy. // a bad version of strlen that doesn't declare its argument const int bad_strlen (char *x) { strlen( x ); } // note that the extra const is actually implicit in this declaration since // string literals are constant const char *x = "abc"; // cast away const-ness for our strlen function bad_strlen( const_cast<char *>(x) );
+
+->> &-usage:
+
+ 1- Bitwise AND:
+int main() { unsigned short a = 0x5555; // pattern 0101 ... unsigned short b = 0xAAAA; // pattern 1010 ...
+
+cout << hex << ( a & b ) << endl; }
+
+2- Address Of operator:
+int main () { int var; int *ptr; int val; var = 3000; // take the address of var ptr = &var; // take the value available at ptr val = *ptr; cout << "Value of var :" << var << endl; cout << "Value of ptr :" << ptr << endl; cout << "Value of val :" << val << endl;
+
+return 0; }
+
+3- Bitwise-and-assign:
+x &= y; Means the same as: x = x&y;
